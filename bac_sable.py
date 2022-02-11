@@ -46,4 +46,3 @@ bouton = tk.Button(ecran, text="Aléatoire")
 bouton.grid(row=1)
 
 ecran.mainloop()
-

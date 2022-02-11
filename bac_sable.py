@@ -19,6 +19,16 @@ from random import randint
 
 
 # Programme Principale
+# création fenêtre
+ecran = tk.Tk()
 
+# création canvas placé sur la fenêtre
+canvas = tk.Canvas(ecran, height=400, width= 400, bg="white")
+canvas.grid(row=0)
+
+bouton = tk.Button(ecran, text="Aléa")
+bouton.grid(row=1)
+
+ecran.mainloop()
 
 

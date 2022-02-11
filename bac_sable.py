@@ -22,13 +22,17 @@ def Creation_configuration():
     Utilisation de double liste et duu module random pour générer des 
     nombres aléatoires."""
     global configuration_courante
+    configuration_courante.append(4*[])
     # création d'un nombre aléatoire grâce à la bibliothèque random
     nbr_alea = randint(0, 6)
     configuration_courante.append(["#"]*3)
     configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
-    configuration_courante.append(["#", nbr_alea*3, "#"])
-    configuration_courante.append(["#", nbr_alea*3, "#"])
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea, "#"])
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea, "#"])
     configuration_courante.append(["#"]*3)
+
+    # modifie le texte du canvas 
+    canvas.itemconfigure(texte, text= configuration_courante)
     
 
 
@@ -41,8 +45,11 @@ canvas = tk.Canvas(ecran, height=500, width= 800, bg="white")
 # méthode grid row = 0 place a la premiere ligne
 canvas.grid(row=0)
 
-bouton = tk.Button(ecran, text="Aléatoire")
+bouton = tk.Button(ecran, text="Aléatoire", command=Creation_configuration)
 # méthode grid row = 1 place a la deuxième ligne
 bouton.grid(row=1)
+
+# Creer une zone de texte sur le canvas
+texte = canvas.create_text(100, 100, text="", fill="black")
 
 ecran.mainloop()

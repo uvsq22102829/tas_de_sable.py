@@ -13,7 +13,7 @@ from random import randint
 # Definition des Constantes
 
 # Definition des Variables globales
-#Donnée du nombre de grains de sable pour chaque case de la grille
+configuration_courante = []
 
 # Definition des fonctions
 def Confaleatoir :

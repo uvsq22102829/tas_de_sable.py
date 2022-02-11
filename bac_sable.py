@@ -17,13 +17,14 @@ from random import randint
 configuration_courante = []
 
 # Definition des fonctions
-def Creation_configuration():
+def creation_configuration():
     """ Création de la configuration en créant chaque case de la grille.
     Utilisation de double liste et duu module random pour générer des 
     nombres aléatoires."""
     global configuration_courante
     configuration_courante.append(4*[])
     # création d'un nombre aléatoire grâce à la bibliothèque random
+    
     nbr_alea = randint(0, 6)
     configuration_courante.append(["#"]*3)
     configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
@@ -35,6 +36,11 @@ def Creation_configuration():
     canvas.itemconfigure(texte, text= configuration_courante)
     
 
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
+    configuration_courante.append(["#"]*3)
+
+
 
 # Programme Principale
 # création fenêtre
@@ -45,7 +51,7 @@ canvas = tk.Canvas(ecran, height=500, width= 800, bg="white")
 # méthode grid row = 0 place a la premiere ligne
 canvas.grid(row=0)
 
-bouton = tk.Button(ecran, text="Aléatoire", command=Creation_configuration)
+bouton = tk.Button(ecran, text="Aléatoire", command=creation_configuration)
 # méthode grid row = 1 place a la deuxième ligne
 bouton.grid(row=1)
 

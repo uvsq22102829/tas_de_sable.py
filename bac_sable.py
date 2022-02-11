@@ -16,8 +16,6 @@ from random import randint
 configuration_courante = []
 
 # Definition des fonctions
-def Confaleatoir :
-    print("hellow")
 
 
 # Programme Principale

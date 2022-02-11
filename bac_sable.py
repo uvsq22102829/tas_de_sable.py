@@ -13,9 +13,23 @@ from random import randint
 # Definition des Constantes
 
 # Definition des Variables globales
+# création de la liste
 configuration_courante = []
 
 # Definition des fonctions
+def Creation_configuration():
+    """ Création de la configuration en créant chaque case de la grille.
+    Utilisation de double liste et duu module random pour générer des 
+    nombres aléatoires."""
+    global configuration_courante
+    # création d'un nombre aléatoire grâce à la bibliothèque random
+    
+    nbr_alea = randint(0, 6)
+    configuration_courante.append(["#"]*3)
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
+    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
+    configuration_courante.append(["#"]*3)
 
 
 # Programme Principale

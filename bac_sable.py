@@ -23,10 +23,12 @@ from random import randint
 ecran = tk.Tk()
 
 # création canvas placé sur la fenêtre
-canvas = tk.Canvas(ecran, height=400, width= 400, bg="white")
+canvas = tk.Canvas(ecran, height=500, width= 800, bg="white")
+# méthode grid row = 0 place a la premiere ligne
 canvas.grid(row=0)
 
-bouton = tk.Button(ecran, text="Aléa")
+bouton = tk.Button(ecran, text="Aléatoire")
+# méthode grid row = 1 place a la deuxième ligne
 bouton.grid(row=1)
 
 ecran.mainloop()

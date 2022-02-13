@@ -56,6 +56,6 @@ bouton = tk.Button(ecran, text="Aléatoire", command=creation_configuration)
 bouton.grid(row=1)
 
 # Creer une zone de texte sur le canvas
-texte = canvas.create_text(100, 100, text="", fill="black")
+texte = canvas.create_text(300, 100, text="", fill="black")
 
 ecran.mainloop()

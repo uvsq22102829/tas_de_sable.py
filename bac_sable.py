@@ -9,6 +9,7 @@
 
 # Importation des librairies
 import tkinter as tk
+import random as rd
 from random import randint
 # Definition des Constantes
 
@@ -25,12 +26,13 @@ def creation_configuration():
     configuration_courante.append(4*[])
     # création d'un nombre aléatoire grâce à la bibliothèque random
     
-    nbr_alea = randint(0, 6)
-    configuration_courante.append(["#"]*3)
-    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
-    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea, "#"])
-    configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea, "#"])
-    configuration_courante.append(["#"]*3)
+    #nbr_alea = randint(0, 6)
+    nbr_alea = 2
+    configuration_courante.append(str("#"*3) + '\n')
+    configuration_courante.append(str(["#", nbr_alea, nbr_alea, nbr_alea,  "#"]) + '\n')
+    configuration_courante.append(str(["#", nbr_alea, nbr_alea, nbr_alea, "#"]) + '\n')
+    configuration_courante.append(str(["#", nbr_alea, nbr_alea, nbr_alea, "#"]) + '\n')
+    configuration_courante.append("#"*3)
 
     # modifie le texte du canvas 
     canvas.itemconfigure(texte, text= configuration_courante)
@@ -39,8 +41,8 @@ def creation_configuration():
     configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
     configuration_courante.append(["#", nbr_alea, nbr_alea, nbr_alea,  "#"])
     configuration_courante.append(["#"]*3)
-
-
+    
+        
 
 # Programme Principale
 # création fenêtre

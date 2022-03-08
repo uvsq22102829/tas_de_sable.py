@@ -22,7 +22,7 @@ liste = []
 liste_verification = []
 
 # liste de couleurs que prennent les carrés suivant leurs nombres de grain de sables
-liste_couleur = ["yellow", "green", "blue", "black"]
+liste_couleur = ["blue", "black", "yellow", "green"]
 # enregustrer les carres pour modifier leur couleur
 pause = False
 mode_configuration = "alea"
@@ -115,8 +115,8 @@ def configuration_centre():
     for i in range(longueur):
         for j in range(longueur):
             if liste[i][j] != "#":
-                if i == longueur // 2 and j == longueur // 2:
-                    liste[longueur // 2][longueur // 2] = nbr_milieu
+                if i == longueur//2 and j == longueur//2 :
+                    liste[longueur//2][longueur//2] = nbr_milieu
                 else:
                     liste[i][j] = 0
 

@@ -7,6 +7,7 @@
 #####################
 
 
+
 # Importation des librairies
 from random import randint
 import tkinter as tk
@@ -22,7 +23,7 @@ liste = []
 liste_verification = []
 
 # liste de couleurs que prennent les carrés suivant leurs nombres de grain de sables
-liste_couleur = ["blue", "black", "yellow", "green"]
+liste_couleur = ["yellow", "green", "blue", "black"]
 # enregustrer les carres pour modifier leur couleur
 pause = False
 mode_configuration = "alea"
